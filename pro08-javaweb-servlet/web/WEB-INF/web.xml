@@ -12,4 +12,24 @@
         <url-pattern>/demo01</url-pattern>
     </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>Demo02Servlet</servlet-name>
+        <servlet-class>com.atguigu.servlets.Demo02Servlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Demo02Servlet</servlet-name>
+        <url-pattern>/demo02</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Demo03Servlet</servlet-name>
+        <servlet-class>com.atguigu.servlets.Demo03Servlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Demo03Servlet</servlet-name>
+        <url-pattern>/demo03</url-pattern>
+    </servlet-mapping>
 </web-app>
