@@ -11,4 +11,9 @@ public class FruitDAOImpl extends BaseDAO<Fruit> implements FruitDAO {
     public List<Fruit> getFruitList() {
         return super.executeQuery("select * from t_fruit");
     }
+
+    @Override
+    public Fruit getFruitById(Integer fid) {
+        return super.load("select * from t_fruit where fid = ? ",fid);
+    }
 }

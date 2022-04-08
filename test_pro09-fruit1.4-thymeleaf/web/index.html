@@ -1,6 +1,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
@@ -15,14 +15,13 @@
                         <th>操作</th>
                     </tr>
                     <tr th:if="${#lists.isEmpty(session.fruitList)}">
-                        <td colspan="4">对不起，库存为空！</td>
+                        <td colspan="4">对不起，库存为空</td>
                     </tr>
                     <tr th:unless="${#lists.isEmpty(session.fruitList)}" th:each="fruit : ${session.fruitList}">
-                        <!--						<td ><a th:href="@{'/edit.do?fid='+ ${fruit.fid}}" th:text="${fruit.fname}" >苹果</a></td>-->
-                        <td><a th:href="@{/edit.do(fid=${fruit.fid})}" th:text="${fruit.fname}">苹果</a></td>
+                        <td th:text="${fruit.fname}">a苹果</td>
                         <td th:text="${fruit.price}">5</td>
                         <td th:text="${fruit.fcount}">20</td>
-                        <td><img src="imgs/del.jpg" class="delImg"/></td>
+                        <td><img src="imgs/del.jpg" class="delImg"></td>
                     </tr>
                 </table>
             </div>
